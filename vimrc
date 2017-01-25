@@ -4,6 +4,11 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 " --------------------------------------------------------------------
 
+" 中文乱码问题
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
 " YouCompleteMe 代码补全
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 set completeopt=longest,menu  "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -16,17 +21,17 @@ inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDow
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 "youcompleteme  默认tab  s-tab 和自动补全冲突
-"let g:ycm_key_list_select_completion=['<c-n>']
-"let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion=['<c-p>']
-"let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_key_list_select_completion=['<c-n>']
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion=['<c-p>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_confirm_extra_conf=0  "关闭加载.ycm_extra_conf.py提示
 
 let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
 let g:ycm_min_num_of_chars_for_completion=2  " 从第2个键入字符就开始罗列匹配项
 let g:ycm_cache_omnifunc=0 " 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_seed_identifiers_with_syntax=1  " 语法关键字补全
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>   "force recomile with syntastic
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR> " force recomile with syntastic
 nmap <F4> :YcmDiags<CR>
 "nnoremap <leader>lo :lopen<CR>  "open locationlist
 "nnoremap <leader>lc :lclose<CR> "close locationlist
@@ -71,7 +76,24 @@ let g:indent_guides_guide_size = 1
 "set listchars=tab:>-,trail:-,extends:>,precedes:<
 
 " 快速注释
-"let g:NERDSpaceDelims=1 " 注释的时候自动加个空格
+let g:NERDSpaceDelims=1 " 注释的时候自动加个空格
+
+" F2切换切换paste模式(用于解决粘贴格式混乱的问题)
+:set pastetoggle=<F2>
+
+" 文件头信息
+let g:vimrc_author='Gate'
+let g:vimrc_email='creeprw98@outlook.com'
+let g:vimrc_homepage='https://www.nsjs6757.com'
+nmap <F3> :AuthorInfoDetect<cr>
+
+" UltiSnips (Trigger configuration. Do not use <tab> if you use github.com/Valloric/YouCompleteMe.)
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<s-k>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " --------------------------------------------------------------------
 set nocompatible                       " 关闭兼容模式
@@ -81,13 +103,13 @@ let g:airline_powerline_fonts=1        " enable powerlline-fonts
 set number                             " 显示行号
 syntax on                              " 语法高亮
 "set tabstop=2                          " tab大小
-set shiftwidth=3                       " 缩进大小
+set shiftwidth=4                       " 缩进大小
 set expandtab                          " 把'\t' 转换成空格
-set softtabstop=3                      " 修改一个'\t'字符转换成N(3)个空格
+set softtabstop=4                      " 修改一个'\t'字符转换成N(3)个空格
 set incsearch                          " 开启实时搜索
 set ignorecase                         " 搜索时不敏感大小写
 "set wildmenu                           " vim 自带命令行模式补全
 :set pastetoggle=<F2>                  " F2 切换paste模式(处理粘贴文本的格式问题)
-set si                                 " 自动缩进                               
+set cin                                 " 自动缩进                               
 set hlsearch                           " 高亮搜索
 filetype plugin indent on              "开启文件类型检测
