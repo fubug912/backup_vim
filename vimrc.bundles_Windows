@@ -1,0 +1,34 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#rc()
+
+" ---------------------------------------------------
+" Github vim-scripts repos
+
+
+" ---------------------------------------------------
+" other Github repos
+
+Plugin 'vimcn/vimcdoc'  " 中文帮助文档
+Plugin 'VundleVim/Vundle.vim'  "Vundle插件管理
+Plugin 'vim-airline/vim-airline' " 状态栏显示 
+Plugin 'vim-airline/vim-airline-themes' " 状态栏显示(主题)
+Plugin 'Valloric/YouCompleteMe'  " 代码补全
+Plugin 'davidhalter/jedi'  " Python的静态分析工具
+Plugin 'scrooloose/syntastic'  " 语法检查
+Plugin 'altercation/vim-colors-solarized'  " Solarized配色方案
+Plugin 'majutsushi/tagbar'  " 显示文件结构
+Plugin 'kien/ctrlp.vim'  " ctrlp
+Plugin 'easymotion/vim-easymotion'  " 快速跳转
+Plugin 'rking/ag.vim'  " 搜索代码
+Plugin 'tdcdev/ycm_simple_conf'  " YouCompleteMe Simple Configuration
+Plugin 'jiangmiao/auto-pairs'  " 括号补全
+Plugin 'nathanaelkane/vim-indent-guides' " 缩进提示
+Plugin 'scrooloose/nerdcommenter' " 快速注释 
+Plugin 'fubug912/AuthorInfo' "自动生成/更新文件的作者信息
+Plugin 'SirVer/ultisnips' " 安装 SirVer/ultisnips
+Plugin 'honza/vim-snippets' " 安装 SirVer/ultisnips 代码块集合
+
+" ---------------------------------------------------
+" non Github erpos
+
