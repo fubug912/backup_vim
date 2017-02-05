@@ -1,13 +1,27 @@
-#=============================================================================
-#     FileName: README
-#         Desc: 
-#       Author: Gate
-#        Email: creeprw98@outlook.com
-#     HomePage: https://www.nsjs6757.com
-#      Version: 
-#   LastChange: 2017-01-26 16:10:32
-#      History: 
-#=============================================================================
+# =============================================================================
+# FileName: README
+# Desc:
+# Author: Gate
+# Email: creeprw98@outlook.com
+# HomePage: [https://www.nsjs6757.com](https://www.nsjs6757.com)
+# Version:
+# LastChange: 2017-02-05 09:26:42
+# History:
+# =============================================================================
 
 ## 个人备份
+
 这是我本人自己的vim配置的备份
+
+Linux:
+将 vimrc_Linux 重命名为 .vimrc
+将 vimrc.bundles_Linux 重命名为 .vimrc.bundles
+    Ps: 需要安装Vundle.详见:https://github.com/VundleVim/Vundle.vim.
+        插件YouCompleteMe需要编译.详见:https://github.com/Valloric/YouCompleteMe
+Windows:
+将 _vimrc_Windows 重命名为 _vimrc
+将 _vimrc.bundles_Windows 重命名为 _vimrc.bundles
+    Ps: 需要安装Vundle:
+        需要Git
+        安装命令 git clone https://github.com/VundleVim/Vundle.vim.git $vim/vimfiles/bundle/Vundle.vim  $vim 为你的vim安装目录
+        插件YouCompleteMe需要编译.详见:https://github.com/Valloric/YouCompleteMe#windows
